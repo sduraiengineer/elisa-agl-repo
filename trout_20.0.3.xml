@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<include name="agl/trout_20.0.3.xml"/>
+
+	<project name="elisa-tech/meta-elisa"  path="meta-elisa" remote="github" revision="76348d0eb9c1736dc379476ae58ddd216b484aca" />
+
+</manifest>
