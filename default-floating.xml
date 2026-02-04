@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- remote servers to query -->
+  <remote name="agl"
+         fetch="https://gerrit.automotivelinux.org/gerrit/"
+         review="https://gerrit.automotivelinux.org/gerrit/"
+         pushurl="ssh://gerrit.automotivelinux.org:29418"
+  />
+  <remote name="yocto" fetch="https://git.yoctoproject.org/" />
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="openembedded" fetch="https://git.openembedded.org/" />
+
+  <!-- defaults -->
+  <default remote="agl" sync-j="4" revision="trout"/>
+
+
+  <!-- CORE -->
+
+  <!-- use agl revisions/branches here -->
+
+  <!-- AGL things. -->
+  <project name="AGL/meta-agl" path="meta-agl" />
+  <project name="AGL/meta-agl-demo" path="meta-agl-demo" />
+  <project name="AGL/meta-agl-devel" path="meta-agl-devel" />
+
+
+  <!-- FLOATING has no fixed revision for external repos ! -->
+
+  <!-- YOCTO & OE -->
+
+  <!-- Yocto/OpenEmbedded things. -->
+  <project name="poky" path="external/poky" remote="yocto" revision="scarthgap" />
+  <project name="openembedded/meta-openembedded" path="external/meta-openembedded" remote="github" revision="scarthgap" />
+
+
+  <!-- UPSTREAM COMPONENTS -->
+
+  <!-- meta-virtualization -->
+  <project name="meta-virtualization" path="external/meta-virtualization" remote="yocto" revision="scarthgap"/>
+
+  <!-- Qt things -->
+  <project name="yocto/meta-qt6" path="external/meta-qt6" remote="qtio" revision="6.7"/>
+
+  <!-- Security layer -->
+  <project name="meta-security" path="external/meta-security" remote="yocto" revision="scarthgap"/>
+
+  <!-- SELinux layer -->
+  <project name="meta-selinux" path="external/meta-selinux" remote="yocto" revision="scarthgap"/>
+
+  <!-- meta-codescanner - support for using CodeScanner during the build -->
+  <project name="dl9pf/meta-codechecker" path="external/meta-codechecker" remote="github" revision="master"/>
+
+  <!-- meta-spdxscanner - support for fossology -->
+  <project name="meta-spdxscanner" path="external/meta-spdxscanner" remote="yocto" revision="master"/>
+
+  <!-- clang support -->
+  <project name="kraj/meta-clang" path="external/meta-clang" remote="github" revision="scarthgap"/>
+
+  <!-- meta-flutter -->
+  <project name="meta-flutter/meta-flutter" path="external/meta-flutter" remote="github" revision="master"/>
+  <project name="meta-flutter/workspace-automation" path="external/workspace-automation" remote="github" revision="main"/>
+
+  <!-- meta-tensorflow -->
+  <project name="meta-tensorflow" path="external/meta-tensorflow" remote="yocto" revision="master"/>
+
+  <!-- meta-python-ai -->
+  <project name="zboszor/meta-python-ai" path="external/meta-python-ai" remote="github" revision="scarthgap"/>
+
+  <!-- meta-ros -->
+  <project name="ros/meta-ros" path="external/meta-ros" remote="github" revision="scarthgap"/>
+
+
+  <!-- BSPs -->
+
+  <!-- meta-aws -->
+  <project name="aws4embeddedlinux/meta-aws" path="bsp/meta-aws" remote="github" revision="scarthgap"/>
+
+  <!-- Renesas Gen3 specific things -->
+  <project name="renesas-rcar/meta-renesas" path="bsp/meta-renesas" remote="github" revision="scarthgap-dev"/>
+  <project name="CogentEmbedded/meta-rcar" path="bsp/meta-rcar" remote="github" revision="kirkstone-Yocto-v5.9.0"/>
+  <project name="AGL/meta-agl-refhw" path="bsp/meta-agl-refhw" />
+
+  <!-- consolidate on meta-freescale from git.yoctoproject.org -->
+  <project name="meta-freescale" path="bsp/meta-freescale" remote="yocto" revision="scarthgap"/>
+  <project name="Freescale/meta-freescale-3rdparty" path="bsp/meta-freescale-3rdparty" remote="github" revision="scarthgap"/>
+
+  <!-- TI Vayu / Jacinto 6 / DRA7 -->
+  <project name="meta-arm" path="bsp/meta-arm" remote="yocto" revision="scarthgap"/>
+  <project name="meta-ti" path="bsp/meta-ti" remote="yocto" revision="scarthgap"/>
+
+  <!-- Raspberry Pi -->
+  <project name="meta-raspberrypi" path="bsp/meta-raspberrypi" remote="yocto" revision="scarthgap"/>
+  <project name="meta-lts-mixins" path="bsp/meta-lts-mixins_u-boot" remote="yocto" revision="scarthgap/u-boot"/>
+
+  <!-- Sancloud BSP layers -->
+  <project name="SanCloudLtd/meta-sancloud" path="bsp/meta-sancloud" remote="github" revision="kirkstone"/>
+  <project name="EmbeddedAndroid/meta-rtlwifi" path="bsp/meta-rtlwifi" remote="github" revision="master"/>
+
+  <!-- meta-sifive -->
+  <project name="sifive/meta-sifive" path="bsp/meta-sifive" remote="github" revision="scarthgap"/>
+
+  <!-- meta-riscv for several risc boards -->
+  <project name="riscv/meta-riscv" path="bsp/meta-riscv" remote="github" revision="scarthgap"/>
+
+</manifest>
