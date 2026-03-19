@@ -2,6 +2,6 @@
 <manifest>
 	<include name="agl/trout_20.0.3.xml"/>
 
-	<project name="elisa-tech/meta-elisa"  path="meta-elisa" remote="github" revision="76348d0eb9c1736dc379476ae58ddd216b484aca" />
+	<project name="elisa-tech/meta-elisa"  path="meta-elisa" remote="github" revision="5eba0eeb03c4e4c3c4e28f9e1684fe7ae3890da5" />
 
 </manifest>
